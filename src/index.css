@@ -625,52 +625,62 @@ header {
   gap: 16px;
 }
 
-.footer__intro {
+.footer__info {
   width: 25%;
 }
 
-.footer__intro__title {
+.footer__info__title {
   font-size: 24px;
 }
 
-.footer__intro__para {
+.footer__info__para {
   color: var(--gray);
 }
 
-.footer__intro__links {
+.footer__info__links {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.footer__intro__link,
+.footer__info__link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__info__link i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.footer__info__link,
 .footer__company__link {
   color: var(--black);
   transition: 300ms ease;
 }
 
-.footer__intro__link:hover,
+.footer__info__link:hover,
 .footer__company__link:hover {
   color: var(--primary);
 }
 
 .footer__company__title,
 .footer__hours__title,
-.footer__email__title {
+.footer__subscription__title {
   font-size: 24px;
   text-transform: uppercase;
 }
 
 .footer__company__links,
 .footer__hours__list,
-.footer__email__form {
+.footer__subscription__form {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
 }
 
-.footer__email__form__input {
+.footer__subscription__form__input {
   height: 48px;
   padding: 0 16px;
   outline: none;
@@ -678,7 +688,7 @@ header {
   background-color: #ececec;
 }
 
-.footer__email__form__submit {
+.footer__subscription__form__submit {
   height: 48px;
   font-size: 16px;
   font-weight: 700;
@@ -691,7 +701,7 @@ header {
   transition: 300ms ease;
 }
 
-.footer__email__form__submit:hover {
+.footer__subscription__form__submit:hover {
   background-color: #fa4226;
   box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.5);
 }
