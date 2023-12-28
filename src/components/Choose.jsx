@@ -40,14 +40,14 @@ const Choose = () => {
                 }
               />
               <ChooseFeature
-                image={ChooseFeature1}
+                image={ChooseFeature2}
                 title={"All Inclusive Pricing"}
                 paragraph={
                   "Get everything you need in one convenient, transparent price with our all-inclusive pricing policy"
                 }
               />
               <ChooseFeature
-                image={ChooseFeature1}
+                image={ChooseFeature3}
                 title={"No Hidden Charges"}
                 paragraph={
                   "Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest pricing."
