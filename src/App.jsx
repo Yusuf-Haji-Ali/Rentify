@@ -3,6 +3,7 @@ import Choose from "./components/Choose";
 import Features from "./components/Features";
 import Landing from "./components/Landing";
 import Nav from "./components/Nav";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <Banner />
       <Choose />
+      <Testimonials />
     </>
   );
 }

@@ -541,7 +541,7 @@ header {
 .testimonial__info__img__wrapper {
   width: 72px;
   height: 72px;
-  border-radius: 9999px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
