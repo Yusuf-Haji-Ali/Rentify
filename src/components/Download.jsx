@@ -12,7 +12,13 @@ const Download = () => {
               Download our app to get the most out of it
             </h2>
             <p className="download__text__para">
-              Available on Android and Apple Devices
+              Available on Android and Apple Devices.
+            </p>
+            <p className="download__text__para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              perferendis aliquid ab maiores! Amet cupiditate in quae. Eos,
+              iure. Est corporis facere eius animi totam cumque alias! Et, non
+              aliquid.
             </p>
 
             <div className="download__text__links">
