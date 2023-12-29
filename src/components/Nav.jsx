@@ -1,7 +1,9 @@
 import React from "react";
-import NavLogo from "../assets/logo.png";
+import { useState } from "react";
 
 const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       <nav>
@@ -18,7 +20,7 @@ const Nav = () => {
             <a href="" className="nav__link">
               Vehicle Models
             </a>
-            <a href="" className="nav__link disabled">
+            <a href="#testimonials" className="nav__link">
               Testimonials
             </a>
             <a href="" className="nav__link disabled">
@@ -38,31 +40,53 @@ const Nav = () => {
             </button>
           </div>
 
-          <button className="nav__menu">
+          <button className="nav__menu" onClick={() => setIsMenuOpen(true)}>
             <i class="bx bx-menu"></i>
           </button>
         </div>
       </nav>
-      <nav className="menu">
-        <button className="menu__close">
+      <nav className={`menu ${isMenuOpen && "menu-open"}`}>
+        <button className="menu__close" onClick={() => setIsMenuOpen(false)}>
           <i className="bx bx-x"></i>
         </button>
 
-        <a href="" className="menu__link">
-          Home
-        </a>
-        <a href="" className="menu__link">
-          Vehicle Models
-        </a>
-        <a href="" className="menu__link">
-          Testimonials
-        </a>
-        <a href="" className="menu__link">
-          Our Team
-        </a>
-        <a href="" className="menu__link">
-          Contact
-        </a>
+        <div className="menu__links">
+          <a
+            href=""
+            className="menu__link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href=""
+            className="menu__link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Vehicle Models
+          </a>
+          <a
+            href="#testimonials"
+            className="menu__link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Testimonials
+          </a>
+          <a
+            href=""
+            className="menu__link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Our Team
+          </a>
+          <a
+            href=""
+            className="menu__link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </a>
+        </div>
       </nav>
     </>
   );

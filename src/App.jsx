@@ -1,24 +1,21 @@
-import Banner from "./components/Banner";
-import Choose from "./components/Choose";
-import Download from "./components/Download";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
-import Landing from "./components/Landing";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Nav from "./components/Nav";
-import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import Models from "./pages/Models";
 
 function App() {
   return (
-    <>
+    <Router>
       <Nav />
-      <Landing />
-      <Features />
-      <Banner />
-      <Choose />
-      <Testimonials />
-      <Download />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/models" element={<Models />} />
+      </Routes>
+
       <Footer />
-    </>
+    </Router>
   );
 }
 

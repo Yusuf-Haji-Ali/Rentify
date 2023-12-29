@@ -9,7 +9,7 @@ const Landing = () => {
         <img src={HeaderBg} alt="" className="header-bg" />
         <div className="row header__row">
           <div className="header__text">
-            <h2 className="header__text__subtitle">Plan your trip now..</h2>
+            <h2 className="header__text__subtitle">Plan your trip now</h2>
             <h1 className="header__text__title">
               Save <span className="color-primary">big</span> with our car
               rental

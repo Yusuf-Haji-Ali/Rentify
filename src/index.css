@@ -7,6 +7,10 @@
   font-family: Poppins;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary: #ff4d30;
   --black: #010103;
@@ -159,7 +163,7 @@ nav {
   position: absolute;
   top: 44px;
   right: 32px;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   outline: none;
   background: transparent;
@@ -178,6 +182,11 @@ nav {
   color: var(--black);
   font-size: 24px;
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu__link:hover {
+  color: var(--primary);
 }
 
 /* Header */
