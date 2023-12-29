@@ -1,6 +1,6 @@
 import React from "react";
 
-const Model = ({ model }) => {
+const Model = ({ model, setBookingModalOpen, setSelectedModel }) => {
   return (
     <div className="model">
       <img
@@ -38,7 +38,13 @@ const Model = ({ model }) => {
         </div>
       </div>
 
-      <button className="model__btn">
+      <button
+        className="model__btn"
+        onClick={() => {
+          setSelectedModel(`${model.make} ${model.model}`);
+          setBookingModalOpen(true);
+        }}
+      >
         <span className="model__btn__span">Book Ride</span>
         <i className="bx bxs-check-circle .model__btn__icon"></i>
       </button>

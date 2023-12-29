@@ -1002,7 +1002,7 @@ MODELS PAGE
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 24px;
+  font-size: 30px;
   top: 16px;
   right: 16px;
 }
@@ -1075,7 +1075,7 @@ MODELS PAGE
     rotate: 0deg;
   }
   100% {
-    rotate: 360deg;
+    rotate: -360deg;
   }
 }
 

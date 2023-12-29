@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
-import CarModel from "../assets/model-img.png";
-import axios from "axios";
 import Model from "./ui/Model";
 import ModelSkeleton from "./ui/ModelSkeleton";
 
-const VehicleModels = () => {
-  const [models, setModels] = useState([]);
+const VehicleModels = ({
+  models,
+  setModels,
+  setBookingModalOpen,
+  setSelectedModel,
+}) => {
   const [sortValue, setSortValue] = useState("HIGH_TO_LOW");
-
-  const fetchModels = async () => {
-    const { data } = await axios.get(
-      "https://car-rental-api.up.railway.app/car"
-    );
-    setModels(data.data);
-  };
 
   const sortModels = (sortValue) => {
     console.log(sortValue);
@@ -29,10 +24,6 @@ const VehicleModels = () => {
       setModels(models.slice().sort((a, b) => b.rating - a.rating));
     }
   };
-
-  useEffect(() => {
-    fetchModels();
-  }, []);
 
   useEffect(() => {
     sortModels(sortValue);
@@ -74,7 +65,14 @@ const VehicleModels = () => {
 
           <div className="models__list">
             {models.length > 0
-              ? models.map((model) => <Model model={model} key={model.id} />)
+              ? models.map((model) => (
+                  <Model
+                    model={model}
+                    key={model.id}
+                    setBookingModalOpen={setBookingModalOpen}
+                    setSelectedModel={setSelectedModel}
+                  />
+                ))
               : new Array(20)
                   .fill(0)
                   .map((_, index) => <ModelSkeleton key={index} />)}
