@@ -6,8 +6,9 @@ const Nav = () => {
     <>
       <nav>
         <div className="nav__container">
-          <a href="" className="nav__img__wrapper">
-            <img src={NavLogo} alt="" className="nav__img" />
+          <a href="" className="nav__logo__wrapper">
+            <i className="bx bxs-car color-primary"></i>
+            <span>Rentify</span>
           </a>
 
           <div className="nav__links">
