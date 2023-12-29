@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderBg from "../assets/header-bg.png";
 import HeaderCar from "../assets/header-car.png";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -20,14 +21,18 @@ const Landing = () => {
             </p>
 
             <div className="header__text__btns">
-              <button className="header__text__btn header__text__book">
-                <span className="header__text__btn__span">Book Ride</span>
-                <i class="bx bxs-check-circle"></i>
-              </button>
-              <button className="header__text__btn header__text__learn">
-                <span className="header__text__btn__span">Learn More</span>
-                <i class="bx bx-chevron-right"></i>
-              </button>
+              <Link to="/models">
+                <button className="header__text__btn header__text__book">
+                  <span className="header__text__btn__span">Book Ride</span>
+                  <i class="bx bxs-check-circle"></i>
+                </button>
+              </Link>
+              <Link to="/models">
+                <button className="header__text__btn header__text__learn">
+                  <span className="header__text__btn__span">Learn More</span>
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </Link>
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,36 +9,34 @@ const Nav = () => {
     <>
       <nav>
         <div className="nav__container">
-          <a href="" className="nav__logo__wrapper">
+          <Link to={"/"} className="nav__logo__wrapper">
             <i className="bx bxs-car color-primary"></i>
             <span>Rentify</span>
-          </a>
+          </Link>
 
           <div className="nav__links">
-            <a href="" className="nav__link">
+            <Link to={"/"} className="nav__link">
               Home
-            </a>
-            <a href="/models" className="nav__link">
+            </Link>
+            <Link to={"/models"} className="nav__link">
               Vehicle Models
-            </a>
-            <a href="/#testimonials" className="nav__link">
+            </Link>
+            <Link to={"/"} className="nav__link disabled">
               Testimonials
-            </a>
-            <a href="" className="nav__link disabled">
+            </Link>
+            <Link to={"/"} className="nav__link disabled">
               Our Team
-            </a>
-            <a href="" className="nav__link disabled">
+            </Link>
+            <Link to={"/"} className="nav__link disabled">
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="nav__btns">
-            <a href="" className="nav__link disabled">
+            <Link to={"/"} className="nav__link disabled">
               Sign In
-            </a>
-            <button href="" className="nav__btns__register disabled">
-              Register
-            </button>
+            </Link>
+            <button className="nav__btns__register disabled">Register</button>
           </div>
 
           <button className="nav__menu" onClick={() => setIsMenuOpen(true)}>
@@ -51,41 +50,41 @@ const Nav = () => {
         </button>
 
         <div className="menu__links">
-          <a
-            href=""
+          <Link
+            to={"/"}
             className="menu__link"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to={"/"}
             className="menu__link"
             onClick={() => setIsMenuOpen(false)}
           >
             Vehicle Models
-          </a>
-          <a
-            href="#testimonials"
+          </Link>
+          <Link
+            to={"/"}
             className="menu__link"
             onClick={() => setIsMenuOpen(false)}
           >
             Testimonials
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to={"/"}
             className="menu__link"
             onClick={() => setIsMenuOpen(false)}
           >
             Our Team
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            to={"/"}
             className="menu__link"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </nav>
     </>
