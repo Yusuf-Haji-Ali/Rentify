@@ -17,10 +17,10 @@ const Nav = () => {
             <a href="" className="nav__link">
               Home
             </a>
-            <a href="" className="nav__link">
+            <a href="/models" className="nav__link">
               Vehicle Models
             </a>
-            <a href="#testimonials" className="nav__link">
+            <a href="/#testimonials" className="nav__link">
               Testimonials
             </a>
             <a href="" className="nav__link disabled">

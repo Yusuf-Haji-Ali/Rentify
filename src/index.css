@@ -807,6 +807,7 @@ MODELS PAGE
 
 .models__list {
   flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 
