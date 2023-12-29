@@ -10,7 +10,9 @@ const Model = ({ model }) => {
       />
 
       <div className="model__details model__details-1">
-        <h3 className="model__details__name">{model.model}</h3>
+        <h3 className="model__details__name">
+          {`${model.make} ${model.model}`}
+        </h3>
         <h4 className="model__details__price">
           £{Math.floor(model.per_day_price)}{" "}
           <span className="model__details__price__span">per day</span>
