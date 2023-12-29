@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CarModel from "../assets/model-img.png";
 import axios from "axios";
 import Model from "./ui/Model";
+import ModelSkeleton from "./ui/ModelSkeleton";
 
 const VehicleModels = () => {
   const [models, setModels] = useState([]);
@@ -51,9 +52,9 @@ const VehicleModels = () => {
           </div>
 
           <div className="models__list">
-            {models.map((model) => (
-              <Model model={model} key={model.id} />
-            ))}
+            {models.length > 0
+              ? models.map((model) => <Model model={model} key={model.id} />)
+              : new Array(20).fill(0).map(() => <ModelSkeleton />)}
           </div>
         </div>
       </div>
