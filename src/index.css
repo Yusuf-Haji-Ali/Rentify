@@ -894,7 +894,7 @@ MODELS PAGE
 .models__list__spinner {
   font-size: 40px;
   margin: 0 auto;
-  animation: loading-spinner 1000ms infinite;
+  animation: loading-spinner 1000ms linear infinite alternate;
 }
 
 .skeleton {
@@ -1067,7 +1067,7 @@ MODELS PAGE
 
 .form__item__submit__loading {
   font-size: 24px;
-  animation: loading-spinner 1000ms infinite;
+  animation: loading-spinner 1000ms linear infinite;
 }
 
 @keyframes loading-spinner {
@@ -1075,7 +1075,7 @@ MODELS PAGE
     rotate: 0deg;
   }
   100% {
-    rotate: -360deg;
+    rotate: 360deg;
   }
 }
 
